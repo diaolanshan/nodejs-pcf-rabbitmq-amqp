@@ -32,12 +32,8 @@ function start() {
     });
     console.log("[AMQP] connected");
     amqpConn = conn;
-    whenConnected();
+    startPublisher();
   });
-}
-
-function whenConnected() {
-  startPublisher();
 }
 
 var pubChannel = null;
